@@ -1,0 +1,24 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %> </h1>
+  <form action="/runs/<%= run._id %>?_method=PUT" method="POST">
+    <label>
+      <input type="date" name="date" value="<%= run.date %>">
+    </label><br>
+    <label>
+      <input type="text" name="distance" value="<%= run.distance %>">
+    </label><br>
+    <label>
+      <input type="text" name="time" value="<%= run.time %>">
+    </label><br>
+    <label>
+      <input type="text" name="notes" value="<%= run.notes %> ">
+    </label><br>
+    <button type="submit">Update Run</button>
+  
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

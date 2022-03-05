@@ -14,10 +14,11 @@ const runSchema = new Schema({
     required: true,
     min: 0,
   },
-  // achievement: {
-  //   type: Schema.Types.ObjectId, ref: "Goal"
-  // },
   notes: String,
+  creator: {
+    type: Schema.Types.ObjectId, 
+    ref: "Profile",
+  }
 })
 
 const Run = mongoose.model('Run', runSchema)

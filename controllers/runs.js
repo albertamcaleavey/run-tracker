@@ -35,6 +35,7 @@ function create(req, res) {
 
 function show(req, res) {
   Run.findById(req.params.id)
+  .populate('creator')
   .then(run => {
     console.log(run)
     res.render('runs/show', {
@@ -48,9 +49,36 @@ function show(req, res) {
   })
 }
 
+function edit(req, res) {
+  Run.findById(req.params.id)
+  .then(run => {
+    res.render('runs/edit', {
+      run,
+      title: 'Edit Run'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/runs')
+  })
+}
+
+function update(req,res) {
+  Run.findByIdAndUpdate(req.params.id, req.body)
+  .then(() => {
+    res.redirect('/runs')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/runs/edit')
+  })
+}
+
 export {
   index,
   newRun as new,
   create,
   show,
+  edit,
+  update,
 }

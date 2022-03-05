@@ -10,7 +10,12 @@
       <li>Average Pace: <%= run.time/run.distance %> mins/mile</li>
       <li>Notes: <%= run.notes %> </li>
   </ul>
-  
+
+    <form action="/runs/<%= run._id %>/edit" method="GET">
+     <button type="submit">Edit this Run</button>
+   </form>
+ 
+
 </main>
 
 <%- include('../partials/footer') %>

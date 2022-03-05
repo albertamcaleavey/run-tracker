@@ -5,14 +5,18 @@
   <% if (user) { %>
    <h1><%= title %> </h1>
   <form action="/runs" method="POST">
-    <input type="date" name="date" autofocus>
-    <br>
-    <input type="text" name="distance" placeholder="Distance in miles">
-    <br>
-    <input type="text" name="time" placeholder="Time in minutes">
-    <br>
-    <input type="text" name="notes" placeholder="Notes">
-    <br>
+    <label>
+      <input type="date" name="date" autofocus>
+    </label><br>
+    <label>
+      <input type="text" name="distance" placeholder="Distance in miles">
+    </label><br>
+    <label>
+      <input type="text" name="time" placeholder="Time in minutes">
+    </label><br>
+    <label>
+      <input type="text" name="notes" placeholder="Notes">
+    </label><br>
     <button type="submit">Add Run</button>
   </form>
   <% } %>

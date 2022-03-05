@@ -11,6 +11,10 @@ router.get('/new', isLoggedIn, runsCtrl.new)
 router.post('/', isLoggedIn, runsCtrl.create)
 // GET localhost:3000/runs/:id
 router.get('/:id', runsCtrl.show)
+// GET localhost:3000/runs/:id/edit
+router.get('/:id/edit', isLoggedIn, runsCtrl.edit)
+// PUT localhost:3000/runs/:id
+router.put('/:id', isLoggedIn, runsCtrl.update)
 
 export {
   router
