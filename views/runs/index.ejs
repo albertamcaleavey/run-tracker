@@ -6,11 +6,10 @@
   <br>
   <ul>
    <% runs.forEach(run => { %>
-    <li><%= run.distance %></li>
-    <br>
-    <li><%= run.time %> </li>
+    <li><%= run.date %></li>
+    <li><%= run.distance %> </li>
+    <li><%= run.time/run.distance %></li>
   <% }) %> 
-  <li><%= run.time/run.distance %> </li>
   </ul>
 </main>
 

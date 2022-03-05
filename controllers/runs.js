@@ -21,7 +21,19 @@ function newRun(req, res) {
   })
 }
 
+function create(req, res) {
+  const run = new Run(req.body)
+  console.log(run)
+  run.save(function(err) {
+    if (err) return res.redirect('/runs/new')
+    console.log('CREATE NEW RUN')
+    
+    res.redirect('/runs')
+  })
+}
+
 export {
   index,
   newRun as new,
+  create,
 }
