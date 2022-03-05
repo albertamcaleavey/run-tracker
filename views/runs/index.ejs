@@ -1,0 +1,16 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <br>
+  <ul>
+   <% runs.forEach(run => { %>
+    <li><%= run.distance %></li>
+    <br>
+    <li><%= run.time %> </li>
+  <% }) %> 
+  </ul>
+</main>
+
+<%- include('../partials/footer') %>
