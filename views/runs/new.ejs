@@ -2,7 +2,8 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %> </h1>
+  <% if (user) { %>
+   <h1><%= title %> </h1>
   <form action="/runs" method="POST">
     <input type="date" name="date" autofocus>
     <br>
@@ -14,6 +15,7 @@
     <br>
     <button type="submit">Add Run</button>
   </form>
+  <% } %>
 </main>
 
 <%- include('../partials/footer') %>

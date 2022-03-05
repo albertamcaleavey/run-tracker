@@ -22,12 +22,28 @@ function newRun(req, res) {
 }
 
 function create(req, res) {
-  const run = new Run(req.body)
-  console.log(run)
-  run.save(function(err) {
-    if (err) return res.redirect('/runs/new')
-    console.log('CREATE NEW RUN')
-    
+  // create a new document with the Run template using the content in the request (user input)
+  Run.create(req.body)
+  .then(run => {
+    res.redirect('/runs')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/runs/new')
+  })
+}
+
+function show(req, res) {
+  Run.findById(req.params.id)
+  .then(run => {
+    console.log(run)
+    res.render('runs/show', {
+      run,
+      title: `Run from ${run.date}`
+    })
+  })
+  .catch(err => {
+    console.log(err)
     res.redirect('/runs')
   })
 }
@@ -36,4 +52,5 @@ export {
   index,
   newRun as new,
   create,
+  show,
 }

@@ -1,0 +1,16 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %> </h1>
+  <ul>
+      <li>Date: <%= run.date %></li>
+      <li>Distance: <%= run.distance %> </li>
+      <li>Time: <%= run.time %> </li>
+      <li>Average Pace: <%= run.time/run.distance %> mins/mile</li>
+      <li>Notes: <%= run.notes %> </li>
+  </ul>
+  
+</main>
+
+<%- include('../partials/footer') %>
