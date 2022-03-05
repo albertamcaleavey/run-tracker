@@ -15,6 +15,13 @@ function index(req, res) {
   })
 }
 
+function newRun(req, res) {
+  res.render('runs/new', {
+    title: 'Add Run'
+  })
+}
+
 export {
   index,
+  newRun as new,
 }

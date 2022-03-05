@@ -1,0 +1,17 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %> </h1>
+  <form action="/runs" method="POST">
+    <input type="date" name="date" autofocus>
+    <br>
+    <input type="text" name="distance" placeholder="Distance in miles">
+    <br>
+    <input type="time" name="time">
+    <br>
+    <input type="text" name="notes" placeholder="Notes">
+  </form>
+</main>
+
+<%- include('../partials/footer') %>
