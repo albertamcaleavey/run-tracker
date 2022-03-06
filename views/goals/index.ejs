@@ -4,12 +4,28 @@
 <main>
   <h1><%= title %></h1>
   <br>
+  <% if (user) { %>
+   <form action="/goals" method="POST">
+    <label>
+      <input type="checkbox" name="achieved">
+    </label>
+    <label>
+      <input type="text" name="content" placeholder="Enter your new goal">
+    </label>
+    <button type="submit">Add Goal</button>
+  </form>
   <ul>
    <% goals.forEach(goal => { %>
     <li><%= goal.content %> </li>
     <li><%= goal.achieved %></li>
+    <form action="/goals?_method=DELETE" method="POST">
+      <button type="submit">X</button>
+    </form>
+    
   <% }) %> 
   </ul>
+  <% } %>
+  
 </main>
 
 <%- include('../partials/footer') %>

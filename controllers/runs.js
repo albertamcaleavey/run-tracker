@@ -94,7 +94,6 @@ function deleteRun(req, res) {
     res.redirect('/runs')
   })
 }
-// delete functionality works without the authorization
 
 export {
   index,
