@@ -1,0 +1,15 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <br>
+  <ul>
+   <% goals.forEach(goal => { %>
+    <li><%= goal.content %> </li>
+    <li><%= goal.achieved %></li>
+  <% }) %> 
+  </ul>
+</main>
+
+<%- include('../partials/footer') %>
