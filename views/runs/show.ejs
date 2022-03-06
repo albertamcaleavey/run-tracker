@@ -12,9 +12,12 @@
   </ul>
 
     <form action="/runs/<%= run._id %>/edit" method="GET">
-     <button type="submit">Edit this Run</button>
-   </form>
- 
+      <button type="submit">Edit Run</button>
+     </form>
+     <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete Run</button>
+    </form>
+
 
 </main>
 

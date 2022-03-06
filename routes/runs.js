@@ -6,15 +6,19 @@ const router = Router()
 // GET localhost:3000/runs
 router.get('/', runsCtrl.index)
 // GET localhost:3000/runs/new
-router.get('/new', isLoggedIn, runsCtrl.new)
 // POST localhost:3000/runs
 router.post('/', isLoggedIn, runsCtrl.create)
+router.get('/new', isLoggedIn, runsCtrl.new)
 // GET localhost:3000/runs/:id
 router.get('/:id', runsCtrl.show)
-// GET localhost:3000/runs/:id/edit
-router.get('/:id/edit', isLoggedIn, runsCtrl.edit)
 // PUT localhost:3000/runs/:id
 router.put('/:id', isLoggedIn, runsCtrl.update)
+// DELETE - localhost:3000/runs/:id
+router.delete('/:id', isLoggedIn, runsCtrl.delete)
+// GET localhost:3000/runs/:id/edit
+router.get('/:id/edit', isLoggedIn, runsCtrl.edit)
+
+
 
 export {
   router

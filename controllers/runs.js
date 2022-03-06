@@ -37,7 +37,7 @@ function show(req, res) {
   Run.findById(req.params.id)
   .populate('creator')
   .then(run => {
-    console.log(run)
+    // console.log(run)
     res.render('runs/show', {
       run,
       title: `Run from ${run.date}`
@@ -74,6 +74,25 @@ function update(req,res) {
   })
 }
 
+function deleteRun(req, res) {
+  Run.findById(req.params.id)
+  .then(run => {
+    // if (run.creator.equals(req.user.profile._id)){
+      run.delete()
+      .then(() => {
+        res.redirect('/runs')
+      })
+    // } else {
+    //   throw new Error ("NOT AUTHORIZED")
+    // }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/runs')
+  })
+}
+// delete functionality works without the authorization
+
 export {
   index,
   newRun as new,
@@ -81,4 +100,5 @@ export {
   show,
   edit,
   update,
+  deleteRun as delete,
 }
