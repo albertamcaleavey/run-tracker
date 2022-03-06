@@ -22,7 +22,9 @@ function newRun(req, res) {
 }
 
 function create(req, res) {
-  // create a new document with the Run template using the content in the request (user input)
+  console.log(req.user)
+  // adds creator with value of profile objectid
+  req.body.creator = req.user.profile._id
   Run.create(req.body)
   .then(run => {
     res.redirect('/runs')
@@ -37,7 +39,6 @@ function show(req, res) {
   Run.findById(req.params.id)
   .populate('creator')
   .then(run => {
-    // console.log(run)
     res.render('runs/show', {
       run,
       title: `Run from ${run.date}`
@@ -76,15 +77,17 @@ function update(req,res) {
 
 function deleteRun(req, res) {
   Run.findById(req.params.id)
+  // console.log(req.params.id)
   .then(run => {
-    // if (run.creator.equals(req.user.profile._id)){
+    console.log(run)
+    if (run.creator.equals(req.user.profile._id)){
       run.delete()
       .then(() => {
         res.redirect('/runs')
       })
-    // } else {
-    //   throw new Error ("NOT AUTHORIZED")
-    // }
+    } else {
+      throw new Error ("NOT AUTHORIZED")
+    }
   })
   .catch(err => {
     console.log(err)
