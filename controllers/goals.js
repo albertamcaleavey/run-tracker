@@ -1,9 +1,8 @@
 import { Goal } from "../models/goal.js"
 
 function index(req, res) {
-  // req.body.creator = req.user.profile._id
   // only find goals that were created by the current user 
-  Goal.find({})
+  Goal.find({ creator: req.user.profile._id })
   .then(goals => {
     res.render('goals/index', {
       goals,

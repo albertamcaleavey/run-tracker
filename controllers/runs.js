@@ -2,7 +2,8 @@ import { Run } from '../models/run.js'
 
 function index(req, res) {
   // runs refers to the array of documents returned by .find
-  Run.find({})
+  // only find runs that were created by the current user 
+  Run.find({ creator: req.user.profile._id })
   .then(runs => {
     res.render('runs/index', {
       runs,
@@ -22,7 +23,6 @@ function newRun(req, res) {
 }
 
 function create(req, res) {
-  console.log(req.user)
   // adds creator with value of profile objectid
   req.body.creator = req.user.profile._id
   Run.create(req.body)
@@ -75,9 +75,9 @@ function update(req,res) {
   })
 }
 
+// change to findByIdAndDelete? since the user is only viewing data they created, this step of checking if the creator is the same as the current user may be repetitive 
 function deleteRun(req, res) {
   Run.findById(req.params.id)
-  // console.log(req.params.id)
   .then(run => {
     console.log(run)
     if (run.creator.equals(req.user.profile._id)){

@@ -3,22 +3,21 @@
 
 <main>
   <h1><%= title %> </h1>
-  <ul>
+  <% if (user) { %>
+   <ul>
       <li>Date: <%= run.date %></li>
       <li>Distance: <%= run.distance %> </li>
       <li>Time: <%= run.time %> </li>
       <li>Average Pace: <%= run.time/run.distance %> mins/mile</li>
       <li>Notes: <%= run.notes %> </li>
   </ul>
-
     <form action="/runs/<%= run._id %>/edit" method="GET">
       <button type="submit">Edit Run</button>
      </form>
      <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete Run</button>
     </form>
-
-
+  <% } %>
 </main>
 
 <%- include('../partials/footer') %>

@@ -3,7 +3,8 @@
 
 <main>
   <h1><%= title %> </h1>
-  <form action="/runs/<%= run._id %>?_method=PUT" method="POST">
+  <% if (user) { %>
+   <form action="/runs/<%= run._id %>?_method=PUT" method="POST">
     <label>
       <input type="date" name="date" value="<%= run.date %>">
     </label><br>
@@ -17,8 +18,9 @@
       <input type="text" name="notes" value="<%= run.notes %> ">
     </label><br>
     <button type="submit">Update Run</button>
-  
   </form>
+  <% } %>
+  
 </main>
 
 <%- include('../partials/footer') %>

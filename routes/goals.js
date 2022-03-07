@@ -8,7 +8,7 @@ router.get('/', goalsCtrl.index)
 // POST - localhost:3000/goals
 router.post('/', isLoggedIn, goalsCtrl.create)
 // DELETE - localhost:3000/goals
-router.delete('/:id', goalsCtrl.delete)
+router.delete('/:id', isLoggedIn, goalsCtrl.delete)
 export {
   router
 }
