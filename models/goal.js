@@ -7,9 +7,9 @@ const goalSchema = new Schema({
     type: String,
     required: true,
   },
-  achieved: {
-    type: Boolean
-  },
+  // achieved: {
+  //   type: Boolean
+  // },
   creator: {
     type: Schema.Types.ObjectId, 
     ref: "Profile",

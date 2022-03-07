@@ -3,23 +3,35 @@
 
 <main>
   <% if (user) { %>
-   <h1><%= title %> </h1>
-  <form action="/runs" method="POST">
-    <label>
-      <input type="date" name="date" autofocus>
-    </label><br>
-    <label>
-      <input type="text" name="distance" placeholder="Distance in miles">
-    </label><br>
-    <label>
-      
-      <input type="text" name="time" placeholder="Time in minutes">
-    </label><br>
-    <label>
-      <input type="text" name="notes" placeholder="Notes">
-    </label><br>
-    <button type="submit">Add Run</button>
-  </form>
+    <h1><%= title %> </h1>
+    <form action="/runs" method="POST">
+      <div class="input-group mb-3">
+        <label>
+          <input type="date" name="date" class="form-control" placeholder="Time (minutes)" aria-label="Username" aria-describedby="basic-addon1">
+        </label>
+      </div>
+  
+      <div class="input-group mb-3">
+        <label>
+          <input type="text" name="distance" class="form-control" placeholder="Distance (miles)" aria-label="Username" aria-describedby="basic-addon1">
+        </label>
+      </div>
+  
+      <div class="input-group mb-3">
+        <label>
+          <input type="text" name="time" class="form-control" placeholder="Time (minutes)" aria-label="Username" aria-describedby="basic-addon1">
+        </label>
+      </div>
+  
+      <div class="input-group">
+        <label>
+          <textarea name="notes" class="form-control" aria-label="With textarea" placeholder="Notes"></textarea>
+        </label>
+      </div>
+      <label>
+        <button type="submit" class="btn btn-primary">Add Run</button>
+      </label>
+    </form>
   <% } %>
 </main>
 
