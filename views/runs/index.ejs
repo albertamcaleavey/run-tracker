@@ -7,10 +7,10 @@
    <% runs.forEach(run => { %>
     <div class="card">
       <div class="card-body">
-        <p><%= run.date %></p>
+        <p><%= new Date(run.date).toDateString() %></p>
         <p><%= run.distance %> miles</p>
         <a href="/runs/<%= run._id %> ">View Run</a>
-        <i class="fa-solid fa-arrow-right"></i>
+        <i class="fa-solid fa-angle-right"></i>
       </div>
     </div>
 
