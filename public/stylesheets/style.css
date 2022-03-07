@@ -32,17 +32,23 @@ nav {
   justify-content: center;
 }
 
+.navbar-brand {
+  align-self: center;
+}
+
 main {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 1%;
+  font-size: 1.5rem;
   /* width: 230px; */
 }
 
 h1 {
   font-size: 3.6rem;
+  align-self: center;
+  margin: 1%;
 }
 
 /* DESKTOP VIEW */

@@ -1,7 +1,5 @@
-ul {
-  width: 100%;
+form {
+  display: inline-block;
 }
 
-h1 {
-  color: blue;
-}
+

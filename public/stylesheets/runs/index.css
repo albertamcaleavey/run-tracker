@@ -1,0 +1,49 @@
+main {
+  align-items: stretch;
+}
+
+p {
+  display: inline-block;
+}
+
+.run-label {
+  /* margin-left: 1%; */
+  background-color: rgb(226, 226, 226);
+  padding: .4%;
+}
+
+.run-body {
+  background-color: white;
+  border: none;
+  padding: 1.5%;
+  display: grid;
+  grid-template-columns: 10%, 1fr, 15%;
+  grid-template-rows: 50% 50%;
+}
+
+.fa-person-running{
+/* grid-area: 1/ 1 / 2 / 2; */
+grid-column: 1;
+grid-row-start: span 2;
+align-self: center;
+justify-self: center;
+}
+
+#runs-distance {
+grid-column: 2;
+grid-row: 1;
+}
+
+#runs-time {
+  grid-column: 2;
+  grid-row: 2;
+  color: rgb(179, 179, 179);
+}
+
+#runs-view, .fa-angle-right {
+  grid-column: 3;
+  grid-row-start: span 2;
+}
+
+
+
