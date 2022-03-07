@@ -17,11 +17,10 @@
   <ul>
    <% goals.forEach(goal => { %>
     <li><%= goal.content %> </li>
-    <li><%= goal.achieved %></li>
-    <form action="/goals?_method=DELETE" method="POST">
+    <li><%= goal.achieved ? 'Yes' : 'No' %></li>
+    <form action="/goals/<%= goal._id %>?_method=DELETE" method="POST">
       <button type="submit">X</button>
     </form>
-    
   <% }) %> 
   </ul>
   <% } %>

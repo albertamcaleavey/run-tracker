@@ -18,6 +18,11 @@ function index(req, res) {
 
 function create(req, res) {
   req.body.creator = req.user.profile._id
+  if(req.body.achieved === null){
+    req.body.achieved = 'false'
+  } else {
+    req.body.achieved = 'true'
+  }
   Goal.create(req.body)
   .then(goal => {
     console.log(goal)
@@ -31,7 +36,6 @@ function create(req, res) {
 
 function deleteGoal(req, res) {
   Goal.findById(req.params.id)
-  // console.log(req.params.id)
   .then(goal => {
     if (goal.creator.equals(req.user.profile._id)){
       goal.delete()
