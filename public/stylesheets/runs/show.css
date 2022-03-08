@@ -1,4 +1,4 @@
-#run-header {
+.header {
   display: grid;
   grid-template-columns: 10% 1fr 10%;
   justify-items: center;

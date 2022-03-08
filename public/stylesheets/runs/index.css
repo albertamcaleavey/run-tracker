@@ -1,4 +1,4 @@
-#runs-header {
+.header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
@@ -30,9 +30,12 @@ p {
   /* margin-left: 1%; */
   background-color: rgb(226, 226, 226);
   padding: .4%;
+  border-radius: 10px;
 }
 
 .run-body {
+  /* margin: 2%; */
+  border-radius: 10px;
   background-color: white;
   border: none;
   padding: 1.5%;

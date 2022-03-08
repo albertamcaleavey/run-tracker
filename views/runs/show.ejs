@@ -3,9 +3,9 @@
 <%- include('../partials/nav') %>
 
 <main>
-  
-  <div id="run-header" >
-    <i class="fa-solid fa-angle-left"></i>
+
+  <div class="header" >
+    <a href="/runs"><i class="fa-solid fa-angle-left"></i></a>
     <h1><%= title %></h1>
     <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">
       <button id="garbage-btn" type="submit"><i class="fa-solid fa-trash-can"></i></button>
@@ -14,6 +14,7 @@
   <div id="run-label">
     <p><i class="fa-solid fa-person-running"></i> Date: <%= new Date(run.date).toDateString() %></p>
   </div>
+
   <% if (user) { %>
     <div class="card">
       <div class="card-body">

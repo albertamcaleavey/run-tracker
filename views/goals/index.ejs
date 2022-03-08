@@ -3,8 +3,11 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
-  <br>
+  <div class="header" >
+    <i class="fa-solid fa-angle-left"></i>
+    <h1><%= title %></h1>
+    <i class="fa-solid fa-plus"></i>
+  </div>
   <% if (user) { %>
    <form action="/goals" method="POST">
     <div class="input-group mb-3">
@@ -13,20 +16,27 @@
     </div>
   </form>
 
-  <ul class="list-group">
-   <% goals.forEach(goal => { %>
-    <li class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-      <%= goal.content %>
 
+   <% goals.forEach(goal => { %>
+    <div class="goal-div">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          <%= goal.content %>
+        </label>
+      </div>
       <form action="/goals/<%= goal._id %>/edit" method="GET">
         <button id="edit-goal-btn" type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
       </form>
-
-        <form action="/goals/<%= goal._id %>?_method=DELETE" method="POST">
+      <form action="/goals/<%= goal._id %>?_method=DELETE" method="POST">
         <button type="submit" class="btn btn-danger">X</button>
       </form>
-    </li>
+    </div>
+
+
+       
+
+
     
   <% }) %> 
   </ul>
