@@ -2,8 +2,32 @@ main {
   align-items: stretch;
 }
 
+#runs-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+h1 {
+  grid-column: 2;
+  justify-self: center;
+  margin: 2%;
+}
+
+.fa-angle-left {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.fa-plus {
+  grid-column: 3;
+  justify-self: end;
+}
+
 p {
   display: inline-block;
+  margin: 0;
 }
 
 .run-label {
@@ -17,7 +41,7 @@ p {
   border: none;
   padding: 1.5%;
   display: grid;
-  grid-template-columns: 10%, 1fr, 15%;
+  grid-template-columns: 1fr, 1fr, 1fr;
   grid-template-rows: 50% 50%;
 }
 
@@ -26,7 +50,7 @@ p {
 grid-column: 1;
 grid-row-start: span 2;
 align-self: center;
-justify-self: center;
+justify-self: start;
 }
 
 #runs-distance {
@@ -40,9 +64,11 @@ grid-row: 1;
   color: rgb(179, 179, 179);
 }
 
-#runs-view, .fa-angle-right {
+#runs-view {
   grid-column: 3;
   grid-row-start: span 2;
+  align-self: center;
+  justify-self: end;
 }
 
 

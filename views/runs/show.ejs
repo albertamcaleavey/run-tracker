@@ -1,13 +1,22 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/runs/show.css">
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %> </h1>
+  
+  <div id="run-header" >
+    <i class="fa-solid fa-angle-left"></i>
+    <h1><%= title %></h1>
+    <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">
+      <button id="garbage-btn" type="submit"><i class="fa-solid fa-trash-can"></i></button>
+    </form>
+  </div>
+  <div id="run-label">
+    <p><i class="fa-solid fa-person-running"></i> Date: <%= new Date(run.date).toDateString() %></p>
+  </div>
   <% if (user) { %>
     <div class="card">
-      
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Date: <%= new Date(run.date).toDateString() %></li>
@@ -19,7 +28,7 @@
         </p>
 
         <form action="/runs/<%= run._id %>/edit" method="GET">
-          <button type="submit" class="btn btn-primary">Edit</button>
+          <button type="submit" class="btn btn-outline-warning">Edit</button>
         </form>
 
         <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">

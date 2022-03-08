@@ -1,0 +1,45 @@
+main {
+  align-items: stretch;
+}
+
+#run-header {
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  justify-items: center;
+  align-items: center;
+}
+
+#run-label {
+  background-color: rgb(211, 211, 211);
+}
+
+h1 {
+  grid-column: 2;
+  justify-self: center;
+  margin: 2%;
+}
+
+.fa-angle-left {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.fa-trash-can {
+  grid-column: 3;
+  justify-self: end;
+}
+
+#garbage-btn {
+  background-color: rgba(240, 248, 255, 0);
+  border-radius: 50%;
+  border: 0
+}
+
+.card {
+  display: grid;
+  place-content: center;
+}
+
+.btn-outline-warning {
+  align-self: center;
+}

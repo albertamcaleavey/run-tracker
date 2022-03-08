@@ -41,7 +41,7 @@ function show(req, res) {
   .then(run => {
     res.render('runs/show', {
       run,
-      title: `Run from ${new Date(run.date).toDateString()}`
+      title: 'Run Summary'
     })
   })
   .catch(err => {

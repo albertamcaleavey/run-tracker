@@ -3,7 +3,12 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
+  <div id="runs-header" >
+    <i class="fa-solid fa-angle-left"></i>
+    <h1><%= title %></h1>
+    <i class="fa-solid fa-plus"></i>
+  </div>
+  
   <% if (user) { %>
    <% runs.forEach(run => { %>
     <div class="run-label"><%= new Date(run.date).toDateString() %></div>
@@ -12,8 +17,8 @@
         <i class="fa-solid fa-person-running"></i>
         <p id="runs-distance"><%= run.distance %> miles</p>
         <p id="runs-time" class=""><%= run.time %> minutes</p>
-        <a id="runs-view" href="/runs/<%= run._id %> ">View Run</a>
-        <i class="fa-solid fa-angle-right"></i>
+        <a id="runs-view" href="/runs/<%= run._id %> "><i class="fa-solid fa-angle-right"></i></a>
+        
       </div>
   <% }) %> 
 
