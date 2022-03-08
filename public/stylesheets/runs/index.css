@@ -13,12 +13,12 @@ h1 {
 
 .fa-angle-left {
   grid-column: 1;
-  justify-self: start;
+  /* justify-self: start; */
 }
 
-.fa-plus {
+.add-run {
   grid-column: 3;
-  justify-self: end;
+  /* justify-self: end; */
 }
 
 p {

@@ -15,14 +15,14 @@ h1 {
   margin: 2%;
 }
 
-.fa-angle-left {
+.back-arrow {
   grid-column: 1;
-  justify-self: start;
+  /* justify-self: start; */
 }
 
-.fa-trash-can {
+.delete {
   grid-column: 3;
-  justify-self: end;
+  /* justify-self: end; */
 }
 
 #garbage-btn {

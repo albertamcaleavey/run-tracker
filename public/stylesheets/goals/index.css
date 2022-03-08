@@ -5,7 +5,6 @@
   align-items: center;
 }
 
-
 h1 {
   grid-column: 2;
   justify-self: center;
@@ -14,12 +13,12 @@ h1 {
 
 .fa-angle-left {
   grid-column: 1;
-  justify-self: start;
+  /* justify-self: start; */
 }
 
 .fa-plus {
   grid-column: 3;
-  justify-self: end;
+  /* justify-self: end; */
 }
 
 .form-check, form {
