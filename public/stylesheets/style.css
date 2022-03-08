@@ -38,7 +38,7 @@ nav {
 
 main {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   flex-direction: column;
   font-size: 1.5rem;

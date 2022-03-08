@@ -18,9 +18,14 @@
     <li class="list-group-item">
       <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
       <%= goal.content %>
-      <form action="/goals/<%= goal._id %>?_method=DELETE" method="POST">
+
+      <form action="/goals/<%= goal._id %>/edit" method="GET">
+        <button id="edit-goal-btn" type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
+      </form>
+
+        <form action="/goals/<%= goal._id %>?_method=DELETE" method="POST">
         <button type="submit" class="btn btn-danger">X</button>
-    </form>
+      </form>
     </li>
     
   <% }) %> 

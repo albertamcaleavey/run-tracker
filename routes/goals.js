@@ -9,6 +9,13 @@ router.get('/', goalsCtrl.index)
 router.post('/', isLoggedIn, goalsCtrl.create)
 // DELETE - localhost:3000/goals
 router.delete('/:id', isLoggedIn, goalsCtrl.delete)
+// PUT localhost:3000/runs/:id
+router.put('/:id', isLoggedIn, goalsCtrl.update)
+// GET localhost:3000/goals/:id/edit
+router.get('/:id/edit', isLoggedIn, goalsCtrl.edit)
+
+
+
 export {
   router
 }

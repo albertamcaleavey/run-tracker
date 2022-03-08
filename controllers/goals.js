@@ -51,8 +51,35 @@ function deleteGoal(req, res) {
   })
 }
 
+function edit(req, res) {
+  Goal.findById(req.params.id)
+  .then(goal => {
+    res.render('goals/edit', {
+      goal,
+      title: 'Edit Goal'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/goals')
+  })
+}
+
+function update(req,res) {
+  Goal.findByIdAndUpdate(req.params.id, req.body)
+  .then(() => {
+    res.redirect('/goals')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/goals/edit')
+  })
+}
+
 export {
   index,
   create,
   deleteGoal as delete,
+  edit,
+  update,
 }
