@@ -14,7 +14,10 @@ const goalSchema = new Schema({
     type: Schema.Types.ObjectId, 
     ref: "Profile",
   }
+}, {
+  timestamps: true
 })
+
 
 const Goal = mongoose.model('Goal', goalSchema)
 

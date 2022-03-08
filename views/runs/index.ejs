@@ -3,17 +3,19 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <div class="header" >
-    <i class="fa-solid fa-angle-left"></i>
-    <h1><%= title %></h1>
-    <a class="add-run" href="/runs/new"><i class="fa-solid fa-plus"></i></a>
-  </div>
-  
   <% if (user) { %>
+    <div class="header" >
+      <i class="fa-solid fa-angle-left"></i>
+      <h1><%= title %></h1>
+      <a class="add-run" href="/runs/new"><i class="fa-solid fa-plus"></i></a>
+    </div>
+
    <% runs.forEach(run => { %>
-    <div class="run-label"><%= new Date(run.date).toDateString() %></div>
     
+     <div class="run-label"><%= new Date(run.date).toDateString() %></div>
       <div class="run-body">
+       
+
         <i class="fa-solid fa-person-running"></i>
         <p id="runs-distance"><%= run.distance %> miles</p>
         <p id="runs-time" class=""><%= run.time %> minutes</p>

@@ -19,6 +19,8 @@ const runSchema = new Schema({
     type: Schema.Types.ObjectId, 
     ref: "Profile",
   }
+}, {
+  timestamps: true
 })
 
 const Run = mongoose.model('Run', runSchema)

@@ -23,6 +23,7 @@ function newRun(req, res) {
 }
 
 function create(req, res) {
+  // have to tell mongoose to add the id of what you're referencing 
   // adds creator with value of profile objectid
   req.body.creator = req.user.profile._id
   Run.create(req.body)
@@ -65,6 +66,7 @@ function edit(req, res) {
 }
 
 function update(req,res) {
+  // add , {new: true}
   Run.findByIdAndUpdate(req.params.id, req.body)
   .then(() => {
     res.redirect('/runs')
