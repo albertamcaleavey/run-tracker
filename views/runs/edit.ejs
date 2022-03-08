@@ -3,23 +3,38 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %> </h1>
   <% if (user) { %>
-   <form action="/runs/<%= run._id %>?_method=PUT" method="POST">
-    <label>
-      <input type="date" name="date" value="<%= run.date %>">
-    </label><br>
-    <label>
-      <input type="text" name="distance" value="<%= run.distance %>">
-    </label><br>
-    <label>
-      <input type="text" name="time" value="<%= run.time %>">
-    </label><br>
-    <label>
-      <input type="text" name="notes" value="<%= run.notes %> ">
-    </label><br>
-    <button type="submit">Update Run</button>
-  </form>
+    <div class="header" >
+      <a class="back-arrow" href="/runs"><i class="fa-solid fa-angle-left"></i></a>
+      <h1><%= title %></h1>
+    </div>
+    <section>
+      <form action="/runs/<%= run._id %>?_method=PUT" method="POST">
+        <div>
+          <label>
+          <input type="date" name="date" value="<%= run.date %>">
+        </label>
+        </div>
+        <div>
+          <label>
+          <input type="text" name="distance" value="<%= run.distance %>">
+        </label>
+        </div>
+        <div>
+          <label>
+          <input type="text" name="time" value="<%= run.time %>">
+        </label>
+        </div>
+        <div>
+          <label>
+          <input type="text" name="notes" value="<%= run.notes %> ">
+        </label>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-outline-primary">Update</button>
+        </div>
+      </form>
+    </section>
   <% } %>
   
 </main>

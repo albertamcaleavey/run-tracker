@@ -11,10 +11,10 @@ h1 {
   margin: 2%;
 }
 
-.fa-angle-left {
+/* .fa-angle-left {
   grid-column: 1;
-  /* justify-self: start; */
-}
+  justify-self: start;
+} */
 
 .add-run {
   grid-column: 3;

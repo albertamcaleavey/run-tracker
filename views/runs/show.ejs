@@ -23,7 +23,7 @@
             <li class="list-group-item">Distance: <%= run.distance %></li>
             <li class="list-group-item">Time: <%= run.time %> </li>
             <li class="list-group-item">Average Pace: <%= run.time/run.distance %> mins/mile</li>
-            <li class="list-group-item">Notes: <%= run.notes %></li>
+            <li class="list-group-item"><%= run.notes === '' ? 'Notes: None' : `Notes:  ${run.notes}` %></li>
           </ul>
         </p>
 
