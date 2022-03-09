@@ -27,21 +27,8 @@
           </ul>
         </p>
 
-        <div>
-          <ul>
-            <% run.achievements.forEach(achievement => { %>
-              <li><%= achievement.content %> </li>
-             
-            <% }) %>
-          </ul>
-        </div>
-        <form action="">
-          <select name="goalId" id="">
-            <% goals.forEach(goal => { %>
-             <option value="<%= goal._id %> "><%= goal.content %> </option>
-            <% }) %>
-          </select>
-        </form>
+        
+          
 
         
 
@@ -56,6 +43,22 @@
       </div>
     </div>
 
+    <div>Achievements:</div>
+    <ul>
+      <% run.achievements.forEach(achievement => { %>
+        <li><%= achievement.content %></li>
+      <% }) %>
+    </ul>
+  </section>
+  
+  <form id="add-achievement-to-run" action="/runs/<%= run._id  %>/goals" method="POST">
+    <select name="goalId">
+      <% goals.forEach(goal => { %>
+        <option value="<%= goal._id %>"><%= goal.content %></option>
+      <% }) %>
+    </select>
+    <button type="submit">Add Achievement</button>
+  </form>
    
   <% } %>
 </main>

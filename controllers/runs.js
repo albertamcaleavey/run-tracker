@@ -38,6 +38,7 @@ function create(req, res) {
   })
 }
 
+
 // function show(req, res) {
 //   Run.findById(req.params.id)
 //   // .populate('creator')
@@ -118,6 +119,33 @@ function deleteRun(req, res) {
   })
 }
 
+// function addAchievement(req, res) {
+//   Run.findById(req.params.id)
+//   .then(run => {
+//     run.achievements.push(req.body.goalId)
+//     run.save()
+//     .then(() => {
+//       res.redirect(`/runs/${run._id}`)
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/runs')
+//   })
+// }
+
+function addAchievement(req, res) {
+  Run.findById(req.params.id, function(err, run) {
+    console.log(run.achievements)
+    // console.log(req.body)
+    run.achievements.push(req.body.goalId)
+    // console.log(run.achievements)
+    run.save(function(err) {
+      res.redirect(`/runs/${run._id}`)
+    })
+  })
+}
+
 export {
   index,
   newRun as new,
@@ -126,4 +154,5 @@ export {
   edit,
   update,
   deleteRun as delete,
+  addAchievement, 
 }

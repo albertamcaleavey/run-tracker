@@ -8,6 +8,8 @@ router.get('/', runsCtrl.index)
 // GET localhost:3000/runs/new
 // POST localhost:3000/runs
 router.post('/', isLoggedIn, runsCtrl.create)
+// POST - localhost:3000/runs/:id/goals
+router.post("/:id/goals", runsCtrl.addAchievement)
 router.get('/new', isLoggedIn, runsCtrl.new)
 // GET localhost:3000/runs/:id
 router.get('/:id', runsCtrl.show)
