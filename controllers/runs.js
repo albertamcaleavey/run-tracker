@@ -50,7 +50,7 @@ function create(req, res) {
   // adds creator with value of profile objectid
   req.body.creator = req.user.profile._id
   let runDate = new Date(req.body.date)
-  req.body.date = runDate.toUTCString()
+  req.body.date = new Date( runDate.getTime() + Math.abs(runDate.getTimezoneOffset()*60000))
 
   Run.create(req.body)
   .then(run => {
