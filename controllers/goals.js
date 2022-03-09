@@ -76,10 +76,17 @@ function update(req,res) {
   })
 }
 
+function newGoal(req, res) {
+  res.render('goals/new', {
+    title: 'Add Goal'
+  })
+}
+
 export {
   index,
   create,
   deleteGoal as delete,
   edit,
   update,
+  newGoal as new
 }

@@ -7,6 +7,8 @@ const router = Router()
 router.get('/', goalsCtrl.index)
 // POST - localhost:3000/goals
 router.post('/', isLoggedIn, goalsCtrl.create)
+//GET - localhost:3000/goals/new
+router.get('/new', isLoggedIn, goalsCtrl.new)
 // DELETE - localhost:3000/goals
 router.delete('/:id', isLoggedIn, goalsCtrl.delete)
 // PUT localhost:3000/runs/:id

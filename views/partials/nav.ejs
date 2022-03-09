@@ -1,14 +1,14 @@
   <% if (!user) { %>
     <link rel="stylesheet" href="/stylesheets/siwg.css">
   <% } %>
+  <link rel="stylesheet" href="/stylesheets/nav.css">
 </head>
 <body>
+
   <% if (user) { %>
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/runs">Run Tracker</a>
-  
+      
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,20 +22,31 @@
               <a class="nav-link" href="/runs">Runs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/goals">Goals</a>
-            </li>
-            
-            <li class="nav-item">
               <a class="nav-link" href="/runs/new">Add a Run</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/goals">Goals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/goals/new">Add a Goal</a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="/auth/logout">Logout
               </a>
             </li>
           </ul>
-        </div>
+          
       </div>
-    </nav>
+      <div class="avatar-container">
+            <img class="avatar"
+              src="<%= user.profile.avatar %>"
+              alt="<%= user.profile.name %> avatar"
+            />
+          </div>
+    
+
+    </nav> 
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">

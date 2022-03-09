@@ -1,0 +1,26 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/goals/new.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <% if (user) { %>
+    <div class="header" >
+      <a class="back-arrow" href="/goals"><i class="fa-solid fa-angle-left"></i></a>
+      <h1><%= title %></h1>
+    </div>
+    <div class="body">
+      <form action="/goals" method="POST">
+        <label>
+          <textarea name="content" placeholder="Enter new goal" class="goal-input" size required></textarea>
+        </label>
+        <div>
+          <button type="submit" class="btn btn-primary">Add Goal</button>
+        </div>
+      </form>
+    </div>
+
+    
+  <% } %>
+</main>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,40 @@
+.header {
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  justify-items: center;
+  align-items: center;
+}
+
+h1 {
+  grid-column: 2;
+  justify-self: center;
+  margin: 2%;
+}
+
+.fa-angle-left {
+  grid-column: 1;
+  /* justify-self: start; */
+}
+
+form {
+  display: grid;
+  justify-content: center;
+  align-content: stretch;
+  width: 100%;
+}
+
+div {
+  display: grid;
+  justify-content: center;
+}
+
+textarea {
+  border-radius: 8px;
+  border: 0;
+  padding: 2%;
+  margin-top: 5%;
+  margin-bottom: 4%;
+  box-shadow:0 0 15px 4px rgba(66, 66, 66, 0.116);
+}
+
+

@@ -1,22 +1,13 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/goals/index.css">
-<script defer src="public/js/goals/index.js"></script>
 <%- include('../partials/nav') %>
 
 <main>
-  <div class="header" >
-    <i class="fa-solid fa-angle-left"></i>
-    <h1><%= title %></h1>
-    <i class="fa-solid fa-plus"></i>
-  </div>
   <% if (user) { %>
-   <form action="/goals" method="POST">
-    <div class="input-group mb-3">
-      <input type="text" name="content" class="form-control" placeholder="Enter your new goal" aria-label="Recipient's username" aria-describedby="button-addon2">
-      <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Add Goal</button>
-    </div>
-  </form>
-
+    <div class="header" >
+    <h1><%= title %></h1>
+    <a class="add-run" href="/goals/new"><i class="fa-solid fa-plus"></i></a>
+  </div>
 
    <% goals.forEach(goal => { %>
     <div class="goal-div">
@@ -34,14 +25,8 @@
       </form>
     </div>
 
-
-       
-
-
     
   <% }) %> 
-  </ul>
-
   <% } %>
   
 </main>
