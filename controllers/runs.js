@@ -1,14 +1,36 @@
 import { Run } from '../models/run.js'
 import { Goal } from '../models/goal.js'
 
+// function index(req, res) {
+//   // runs refers to the array of documents returned by .find
+//   // only find runs that were created by the current user 
+//   Run.find({ creator: req.user.profile._id })
+//   .then(runs => {
+//     res.render('runs/index', {
+//       runs,
+//       title: 'All Runs',
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/runs')
+//   })
+// }
+
 function index(req, res) {
-  // runs refers to the array of documents returned by .find
-  // only find runs that were created by the current user 
   Run.find({ creator: req.user.profile._id })
+  .populate('achievements')
   .then(runs => {
+    Goal.find({})
+    .then(goals => {
+      console.log(runs)
+      console.log(goals)
     res.render('runs/index', {
       runs,
+      goals,
       title: 'All Runs',
+    })
+    
     })
   })
   .catch(err => {
@@ -103,7 +125,6 @@ function update(req,res) {
 function deleteRun(req, res) {
   Run.findById(req.params.id)
   .then(run => {
-    console.log(run)
     if (run.creator.equals(req.user.profile._id)){
       run.delete()
       .then(() => {
@@ -136,7 +157,7 @@ function deleteRun(req, res) {
 
 function addAchievement(req, res) {
   Run.findById(req.params.id, function(err, run) {
-    console.log(run.achievements)
+    // console.log(run.achievements)
     // console.log(req.body)
     run.achievements.push(req.body.goalId)
     // console.log(run.achievements)
