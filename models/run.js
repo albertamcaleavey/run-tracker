@@ -18,7 +18,8 @@ const runSchema = new Schema({
   creator: {
     type: Schema.Types.ObjectId, 
     ref: "Profile",
-  }
+  },
+  achievements: [{type: Schema.Types.ObjectId, ref: 'Goal'}]
 }, {
   timestamps: true
 })

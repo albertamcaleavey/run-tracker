@@ -27,6 +27,24 @@
           </ul>
         </p>
 
+        <div>
+          <ul>
+            <% run.achievements.forEach(achievement => { %>
+              <li><%= achievement.content %> </li>
+             
+            <% }) %>
+          </ul>
+        </div>
+        <form action="">
+          <select name="goalId" id="">
+            <% goals.forEach(goal => { %>
+             <option value="<%= goal._id %> "><%= goal.content %> </option>
+            <% }) %>
+          </select>
+        </form>
+
+        
+
         <form action="/runs/<%= run._id %>/edit" method="GET">
           <button type="submit" class="btn btn-outline-warning">Edit</button>
         </form>

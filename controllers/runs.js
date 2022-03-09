@@ -1,4 +1,5 @@
 import { Run } from '../models/run.js'
+import { Goal } from '../models/goal.js'
 
 function index(req, res) {
   // runs refers to the array of documents returned by .find
@@ -37,20 +38,39 @@ function create(req, res) {
   })
 }
 
+// function show(req, res) {
+//   Run.findById(req.params.id)
+//   // .populate('creator')
+//   .populate('achievements')
+//   .then(run => {
+//     res.render('runs/show', {
+//       run,
+//       title: 'Run Summary'
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/runs')
+//   })
+// }
+
 function show(req, res) {
   Run.findById(req.params.id)
-  .populate('creator')
-  .then(run => {
-    res.render('runs/show', {
-      run,
-      title: 'Run Summary'
+  .populate('achievements')
+  .exec(function(err, run) {
+    
+    Goal.find({_id: {$nin: run.achievements}}, function(err, goals) {
+      console.log(run)
+      console.log(goals)
+      res.render('runs/show', {
+        title: 'Run Summary', 
+        run,
+        goals
+      })
     })
   })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/runs')
-  })
 }
+
 
 function edit(req, res) {
   Run.findById(req.params.id)
