@@ -12,7 +12,7 @@
     </form>
   </div>
   <div id="run-label">
-    <p><i class="fa-solid fa-person-running"></i> Date: <%= new Date(run.date).toDateString() %></p>
+    <p><i class="fa-solid fa-person-running"></i> Date: <%= new Date(run.date).toLocaleDateString() %></p>
   </div>
 
     <div class="card">
@@ -47,6 +47,9 @@
     <ul>
       <% run.achievements.forEach(achievement => { %>
         <li><%= achievement.content %></li>
+        <form action="">
+          <button type="submit">X</button>
+        </form>
       <% }) %>
     </ul>
   </section>

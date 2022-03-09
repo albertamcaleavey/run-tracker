@@ -21,7 +21,7 @@ function index(req, res) {
   Run.find({ creator: req.user.profile._id })
   .populate('achievements')
   .then(runs => {
-    Goal.find({})
+    Goal.find({ creator: req.user.profile._id })
     .then(goals => {
       console.log(runs)
       console.log(goals)
@@ -49,6 +49,9 @@ function create(req, res) {
   // have to tell mongoose to add the id of what you're referencing 
   // adds creator with value of profile objectid
   req.body.creator = req.user.profile._id
+  let runDate = new Date(req.body.date)
+  req.body.date = runDate.toUTCString()
+
   Run.create(req.body)
   .then(run => {
     console.log(run)

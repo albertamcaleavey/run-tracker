@@ -4,7 +4,7 @@ import * as goalsCtrl from '../controllers/goals.js'
 const router = Router()
 
 // GET - localhost:3000/goals
-router.get('/', goalsCtrl.index)
+router.get('/', isLoggedIn, goalsCtrl.index)
 // POST - localhost:3000/goals
 router.post('/', isLoggedIn, goalsCtrl.create)
 //GET - localhost:3000/goals/new

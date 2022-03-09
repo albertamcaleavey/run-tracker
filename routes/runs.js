@@ -4,15 +4,15 @@ import { isLoggedIn } from '../middleware/middleware.js'
 const router = Router()
 
 // GET localhost:3000/runs
-router.get('/', runsCtrl.index)
+router.get('/', isLoggedIn, runsCtrl.index)
 // GET localhost:3000/runs/new
 // POST localhost:3000/runs
 router.post('/', isLoggedIn, runsCtrl.create)
 // POST - localhost:3000/runs/:id/goals
-router.post("/:id/goals", runsCtrl.addAchievement)
+router.post("/:id/goals", isLoggedIn, runsCtrl.addAchievement)
 router.get('/new', isLoggedIn, runsCtrl.new)
 // GET localhost:3000/runs/:id
-router.get('/:id', runsCtrl.show)
+router.get('/:id', isLoggedIn, runsCtrl.show)
 // PUT localhost:3000/runs/:id
 router.put('/:id', isLoggedIn, runsCtrl.update)
 // DELETE - localhost:3000/runs/:id
