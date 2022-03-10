@@ -11,7 +11,11 @@
 
    <% runs.forEach(run => { %>
     
-    <div class="run-label"><%= new Date(run.date).toDateString() %></div>
+    <div class="run-label">
+      <p class="date-text">
+        <%= new Date(run.date).toDateString() %>
+      </p>
+    </div>
     <section class="run-body">
       <p class="achievement-star">
           <% if (run.achievements.length) { %>
