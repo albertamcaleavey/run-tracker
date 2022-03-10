@@ -1,14 +1,15 @@
 # Run Tracker
-Run Tracker is a app for tracking your runs and related fitness goals. Users can log details about their runs, create new goals for and mark them off as they've been achieved. 
+Run Tracker is a app for tracking your runs and related fitness goals. Users can log details about their runs, create new goals and accumulate achievements as they've been reached. 
 
 ## Motivation  
-As a long time runner, I created Run Tracker to visualize my progress and keep track of my run related goals. Taking inspiration from running apps I've used in the past, I designed Run Tracker to be a individualized space for users, emphasizing the importance of comparing your progress only to your past self. 
+As a long time runner, I created Run Tracker as a way to visualize my progress and keep track of my run related goals. Taking inspiration from running apps I've used in the past, I designed Run Tracker to be an individualized space for users, emphasizing the importance of comparing your progress only to your past self. 
 
 ## Getting Started
-
+Click [here](https://run-tracker-am.herokuapp.com/) to view the app.  
+Click [here](https://trello.com/b/21y9oWc3/run-tracker) to view the project planning materials.
 
 Wireframe
-
+![wireframe](public/assets/wireframe1.png)  Landing Page
 
 
 ## Technologies Used
@@ -20,5 +21,4 @@ Wireframe
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ## Next Steps
-[] profile page/ dashboard displaying stats such as total miles ran, list achievements, most recent run 
-- 
+- [ ] profile page/ dashboard displaying stats such as total miles ran, all achievements, most recent run 

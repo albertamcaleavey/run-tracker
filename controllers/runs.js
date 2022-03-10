@@ -27,7 +27,7 @@ function index(req, res) {
     res.render('runs/index', {
       runs,
       goals,
-      title: 'All Runs',
+      title: 'Runs',
     })
     
     })
@@ -40,7 +40,7 @@ function index(req, res) {
 
 function newRun(req, res) {
   res.render('runs/new', {
-    title: 'Add Run'
+    title: 'Add a Run'
   })
 }
 
