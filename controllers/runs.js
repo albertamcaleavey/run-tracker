@@ -21,10 +21,9 @@ function index(req, res) {
   Run.find({ creator: req.user.profile._id })
   .populate('achievements')
   .then(runs => {
+    runs.reverse()
     Goal.find({ creator: req.user.profile._id })
     .then(goals => {
-      console.log(runs)
-      console.log(goals)
     res.render('runs/index', {
       runs,
       goals,

@@ -4,6 +4,7 @@ function index(req, res) {
   // only find goals that were created by the current user 
   Goal.find({ creator: req.user.profile._id })
   .then(goals => {
+    goals.reverse()
     res.render('goals/index', {
       goals,
       title: 'Goals'
