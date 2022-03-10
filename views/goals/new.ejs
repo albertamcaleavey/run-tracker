@@ -11,8 +11,9 @@
     <div class="body">
       <form action="/goals" method="POST">
         <label>
-          <textarea name="content" placeholder="Enter new goal" class="goal-input" size required></textarea>
+          <textarea name="content" placeholder="Enter a new goal" class="goal-input" size required></textarea>
         </label>
+        <input type="checkbox" name="achieved" id="achieved-checkbox">
         <div>
           <button type="submit" class="btn btn-primary">Add Goal</button>
         </div>

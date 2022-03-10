@@ -18,11 +18,8 @@ function index(req, res) {
 
 function create(req, res) {
   req.body.creator = req.user.profile._id
-  if(req.body.achieved === null){
-    req.body.achieved = 'false'
-  } else {
-    req.body.achieved = 'true'
-  }
+  req.body.achieved = !!req.body.achieved
+  console.log(req.body)
   Goal.create(req.body)
   .then(goal => {
     console.log(goal)
@@ -55,6 +52,7 @@ function deleteGoal(req, res) {
 function edit(req, res) {
   Goal.findById(req.params.id)
   .then(goal => {
+    console.log(goal)
     res.render('goals/edit', {
       goal,
       title: 'Edit Goal'
@@ -67,8 +65,10 @@ function edit(req, res) {
 }
 
 function update(req,res) {
+  req.body.achieved = !!req.body.achieved
   Goal.findByIdAndUpdate(req.params.id, req.body)
   .then(() => {
+    console.log(req.body)
     res.redirect('/goals')
   })
   .catch(err => {

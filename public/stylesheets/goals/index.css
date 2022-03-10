@@ -11,18 +11,14 @@ h1 {
   margin: 2%;
 }
 
-.fa-angle-left {
-  grid-column: 1;
-  /* justify-self: start; */
-}
-
-.fa-plus {
+.add-goal {
   grid-column: 3;
-  /* justify-self: end; */
+  justify-self: end;
+  margin-right: 10%;
 }
 
-.form-check, form {
-  display: inline-block;
+section {
+  grid-template-columns: 1fr 1fr;
 }
 
 .goal-div {
@@ -30,12 +26,31 @@ h1 {
   border-radius: 8px;
   padding: 1%;
   margin: 1%;
+  display: grid;
+  grid-column: 1;
+  box-shadow:0 0 15px 4px rgba(66, 66, 66, 0.116);
 }
 
 #edit-goal-btn {
   background-color: rgba(240, 248, 255, 0);
   border-radius: 50%;
   border: 0;
+}
+
+form {
+  grid-column: 2;
+  justify-self: end;
+}
+
+@media only screen and (min-width: 768px) {
+  .goal-div {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .add-goal {
+    margin-right: 20%;
+  }
 }
 
 
