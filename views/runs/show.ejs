@@ -17,13 +17,17 @@
   </div>
 
   <div class="card">
-    <div class="distance">Distance: <%= run.distance %></div>
-    <div class="time">Time: <%= run.time %> </div>
-    <div class="average-pace">Average Pace: <%= run.time/run.distance %> mins/mile</div>
-    <div class="notes"><%= run.notes === '' ? 'Notes: None' : `Notes:  ${run.notes}` %>
+    <div class="distance-label" >Distance:</div>
+    <div class="distance"> <%= run.distance %></div>
+    <div class="time-label">Time:</div>
+    <div class="time"> <%= run.time %></div>
+    <div class="average-pace-label" >Average Pace:</div>
+    <div class="average-pace"> <%= run.time/run.distance %> mins/mile</div>
+    <div class="notes-label">Notes</div>
+    <div class="notes"><%= run.notes === '' ? 'None' : `${run.notes}` %>
     </div>
-
-<div class="achievements-list">Achievements:
+    <div class="achievements-label" ><%= run.achievements.length > 1 ? 'Achievements' : 'Achievement' %> </div>
+<div class="achievements-list">
     <ul>
       <% run.achievements.forEach(achievement => { %>
         <li>⭐️ <%= achievement.content %></li>

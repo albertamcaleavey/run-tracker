@@ -35,13 +35,18 @@ h1 {
 .card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   place-items: center;
   border-radius: 10px;
 }
 
 ul {
   list-style-type: none;
+}
+.distance-label {
+  grid-column: 1;
+  grid-row: 2;
+  border-bottom: 1px solid rgb(172, 172, 172);
 }
 
 .distance {
@@ -50,27 +55,47 @@ ul {
   border-bottom: 1px solid rgb(172, 172, 172);
 }
 
+.time-label {
+  grid-row: 2;
+  grid-column: 2;
+}
+
 .time {
   grid-row: 1;
   grid-column: 2;
   border-bottom: 1px solid rgb(172, 172, 172);
 }
 
-.average-pace {
+.average-pace-label {
   grid-column: 1 / 3;
-  grid-row: 2;
-  border-bottom: 1px solid rgb(172, 172, 172);
+  grid-row: 4;
 }
 
-.notes {
+.average-pace {
   grid-column: 1 / 3;
   grid-row: 3;
   border-bottom: 1px solid rgb(172, 172, 172);
 }
 
+.notes-label {
+  grid-column: 1 / 3;
+  grid-row: 6;
+}
+
+.notes {
+  grid-column: 1 / 3;
+  grid-row: 5;
+  border-bottom: 1px solid rgb(172, 172, 172);
+}
+
+.achievements-label {
+  grid-column: 1 / 3;
+  grid-row: 8;
+}
+
 .achievements-list {
   grid-column: 1 / 3;
-  grid-row: 4;
+  grid-row: 7;
   display: grid;
   place-items: center;
   border-bottom: 1px solid rgb(172, 172, 172);
@@ -78,10 +103,14 @@ ul {
 
 .add-achievement-to-run {
   grid-column: 1 / 3;
-  grid-row: 5;
+  grid-row: 9;
 }
+
+
 
 .achievement-select {
   border-radius: 10px;
+  grid-column: 1 / 3;
+  grid-row: 10;
 }
 

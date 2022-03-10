@@ -9,8 +9,8 @@ Click [here](https://run-tracker-am.herokuapp.com/) to view the app.
 Click [here](https://trello.com/b/21y9oWc3/run-tracker) to view the project planning materials.
 
 Wireframe
-![wireframe](public/assets/wireframe1.png)  Landing Page
-
+![wireframe](public/assets/wireframe1.png)  Landing Page  
+Screenshot
 
 ## Technologies Used
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  
@@ -19,6 +19,8 @@ Wireframe
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)  
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)  
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+
 
 ## Next Steps
 - [ ] profile page/ dashboard displaying stats such as total miles ran, all achievements, most recent run 

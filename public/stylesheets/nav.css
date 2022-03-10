@@ -1,6 +1,6 @@
 .navbar-new {
   top: 0; right: 0; bottom: 95%; left: 75%;
-  background-color: rgba(63, 63, 63, 0.637);
+  background-color: rgba(63, 63, 63, 0);
   position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
