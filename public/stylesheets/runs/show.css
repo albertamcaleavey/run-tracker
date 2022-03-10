@@ -10,6 +10,15 @@
   border-radius: 10px;
 }
 
+p {
+  margin: 1%;
+  margin-left: 4%;
+}
+
+.fa-person-running {
+  margin-right: 1%;
+}
+
 h1 {
   grid-column: 2;
   justify-self: center;
@@ -32,12 +41,19 @@ h1 {
   border: 0
 }
 
+.card, #run-label {
+  margin-left: 1%;
+  margin-right: 1%;
+  box-shadow:0 0 15px 4px rgba(66, 66, 66, 0.116);
+}
+
 .card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr 2fr;
   place-items: center;
   border-radius: 10px;
+  padding: 2%;
 }
 
 ul {
@@ -46,51 +62,75 @@ ul {
 .distance-label {
   grid-column: 1;
   grid-row: 2;
-  border-bottom: 1px solid rgb(172, 172, 172);
+  border-top: 1px solid rgb(172, 172, 172);
+  align-self: start;
+  color: rgb(136, 136, 136);;
 }
 
 .distance {
   grid-column: 1;
   grid-row: 1;
-  border-bottom: 1px solid rgb(172, 172, 172);
+  align-self: end;
+  font-size: xx-large;
 }
 
 .time-label {
   grid-row: 2;
   grid-column: 2;
+  border-top: 1px solid rgb(172, 172, 172);
+  align-self: start;
+  color: rgb(136, 136, 136);;
 }
 
 .time {
   grid-row: 1;
   grid-column: 2;
-  border-bottom: 1px solid rgb(172, 172, 172);
+  align-self: end;
+  font-size: xx-large;
 }
 
 .average-pace-label {
   grid-column: 1 / 3;
   grid-row: 4;
+  border-top: 1px solid rgb(172, 172, 172);
+  align-self: start;
+  color: rgb(136, 136, 136);;
 }
 
 .average-pace {
   grid-column: 1 / 3;
   grid-row: 3;
-  border-bottom: 1px solid rgb(172, 172, 172);
+  align-self: end;
+  font-size: xx-large;
 }
 
 .notes-label {
   grid-column: 1 / 3;
   grid-row: 6;
+  border-top: 1px solid rgb(172, 172, 172);
+  align-self: start;
+  justify-self: stretch;
+  margin-left: 3%;
+  margin-right: 3%;
+  color: rgb(136, 136, 136);;
 }
 
 .notes {
   grid-column: 1 / 3;
   grid-row: 5;
-  border-bottom: 1px solid rgb(172, 172, 172);
+  align-self: end;
+  font-size: larger;
 }
 
 .achievements-label {
   grid-column: 1 / 3;
   grid-row: 8;
+  border-top: 1px solid rgb(172, 172, 172);
+  align-self: start;
+  justify-self: stretch;
+  margin-left: 6%;
+  margin-right: 6%;
+  color: rgb(136, 136, 136);;
 }
 
 .achievements-list {
@@ -98,7 +138,8 @@ ul {
   grid-row: 7;
   display: grid;
   place-items: center;
-  border-bottom: 1px solid rgb(172, 172, 172);
+  align-self: end;
+  font-size: larger;
 }
 
 .add-achievement-to-run {
@@ -106,11 +147,28 @@ ul {
   grid-row: 9;
 }
 
-
-
 .achievement-select {
   border-radius: 10px;
   grid-column: 1 / 3;
   grid-row: 10;
 }
 
+.edit-btn {
+  grid-column: 1 / 3;
+  grid-row: 10;
+  align-self: end;
+  margin-bottom: 5%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .card, #run-label {
+    margin-left: 18%;
+    margin-right: 18%;
+  }
+}

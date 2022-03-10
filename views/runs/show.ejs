@@ -17,16 +17,16 @@
   </div>
 
   <div class="card">
-    <div class="distance-label" >Distance:</div>
-    <div class="distance"> <%= run.distance %></div>
-    <div class="time-label">Time:</div>
+    <div class="distance-label" >Distance (mi)</div>
+    <div class="distance"> <%= run.distance %> mi</div>
+    <div class="time-label">Time (mins)</div>
     <div class="time"> <%= run.time %></div>
-    <div class="average-pace-label" >Average Pace:</div>
-    <div class="average-pace"> <%= run.time/run.distance %> mins/mile</div>
+    <div class="average-pace-label" >Average Pace (mins/mi)</div>
+    <div class="average-pace"> <%= run.time/run.distance %></div>
     <div class="notes-label">Notes</div>
     <div class="notes"><%= run.notes === '' ? 'None' : `${run.notes}` %>
     </div>
-    <div class="achievements-label" ><%= run.achievements.length > 1 ? 'Achievements' : 'Achievement' %> </div>
+    <div class="achievements-label" ><%= run.achievements.length ? 'Achievements' : 'Add an Achievement' %> </div>
 <div class="achievements-list">
     <ul>
       <% run.achievements.forEach(achievement => { %>
@@ -40,16 +40,12 @@
           <option value="<%= goal._id %>"><%= goal.content %></option>
         <% }) %>
       </select>
-      <button type="submit" class="btn btn-outline-primary">Add Achievement</button>
+      <button type="submit" class="btn btn-outline-primary">Add</button>
     </form>
 
-    <form action="/runs/<%= run._id %>/edit" method="GET">
-          <button type="submit" class="btn btn-outline-warning">Edit</button>
+    <form class="edit-btn" action="/runs/<%= run._id %>/edit" method="GET">
+          <button type="submit" class="btn btn-outline-warning btn-lg">Edit</button>
         </form>
-
-    <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">
-      <button type="submit" class="btn btn-danger">Delete</button>
-      </form>
 
   </div>
 
