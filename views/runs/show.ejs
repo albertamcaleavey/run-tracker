@@ -4,7 +4,6 @@
 
 <main>
   <% if (user) { %>
-    
   <div class="header" >
     <a class="back-arrow" href="/runs"><i class="fa-solid fa-angle-left"></i></a>
     <h1><%= title %></h1>
@@ -12,57 +11,44 @@
       <button id="garbage-btn" type="submit"><i class="fa-solid fa-trash-can"></i></button>
     </form>
   </div>
+
   <div id="run-label">
     <p><i class="fa-solid fa-person-running"></i> Date: <%= new Date(run.date).toLocaleDateString() %></p>
   </div>
 
-    <div class="card">
-      <div class="card-body">
-        <p class="card-text">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Date: <%= new Date(run.date).toDateString() %></li>
-            <li class="list-group-item">Distance: <%= run.distance %></li>
-            <li class="list-group-item">Time: <%= run.time %> </li>
-            <li class="list-group-item">Average Pace: <%= run.time/run.distance %> mins/mile</li>
-            <li class="list-group-item"><%= run.notes === '' ? 'Notes: None' : `Notes:  ${run.notes}` %></li>
-          </ul>
-        </p>
-
-        
-          
-
-        
-
-        <form action="/runs/<%= run._id %>/edit" method="GET">
-          <button type="submit" class="btn btn-outline-warning">Edit</button>
-        </form>
-
-        <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">
-          <button type="submit" class="btn btn-danger">Delete</button>
-        </form>
-
-      </div>
+  <div class="card">
+    <div class="distance">Distance: <%= run.distance %></div>
+    <div class="time">Time: <%= run.time %> </div>
+    <div class="average-pace">Average Pace: <%= run.time/run.distance %> mins/mile</div>
+    <div class="notes"><%= run.notes === '' ? 'Notes: None' : `Notes:  ${run.notes}` %>
     </div>
 
-    <div>Achievements:</div>
+<div class="achievements-list">Achievements:
     <ul>
       <% run.achievements.forEach(achievement => { %>
         <li>⭐️ <%= achievement.content %></li>
-        <form action="">
-        </form>
       <% }) %>
     </ul>
-  </section>
-  
-  <form id="add-achievement-to-run" action="/runs/<%= run._id  %>/goals" method="POST">
-    <select name="goalId">
-      <% goals.forEach(goal => { %>
-        <option value="<%= goal._id %>"><%= goal.content %></option>
-      <% }) %>
-    </select>
-    <button type="submit">Add Achievement</button>
-  </form>
-   
+</div>
+    <form class="add-achievement-to-run" action="/runs/<%= run._id  %>/goals" method="POST">
+      <select class="achievement-select" name="goalId">
+        <% goals.forEach(goal => { %>
+          <option value="<%= goal._id %>"><%= goal.content %></option>
+        <% }) %>
+      </select>
+      <button type="submit" class="btn btn-outline-primary">Add Achievement</button>
+    </form>
+
+    <form action="/runs/<%= run._id %>/edit" method="GET">
+          <button type="submit" class="btn btn-outline-warning">Edit</button>
+        </form>
+
+    <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">
+      <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+
+  </div>
+
   <% } %>
 </main>
 
