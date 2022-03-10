@@ -17,29 +17,39 @@ h1 {
   margin-right: 10%;
 }
 
-section {
-  grid-template-columns: 1fr 1fr;
-}
-
 .goal-div {
   background-color: white;
   border-radius: 8px;
   padding: 1%;
   margin: 1%;
   display: grid;
-  grid-column: 1;
+  grid-template-columns: 5% 1fr 1fr;
   box-shadow:0 0 15px 4px rgba(66, 66, 66, 0.116);
+}
+
+p {
+  grid-column: 2;
+  margin: 0;
+}
+
+.fa-check {
+  grid-column: 1;
+  align-self: center;
+  justify-self: start;
+  margin-left: 1%;
 }
 
 #edit-goal-btn {
   background-color: rgba(240, 248, 255, 0);
   border-radius: 50%;
   border: 0;
+  
 }
 
 form {
-  grid-column: 2;
+  grid-column: 3;
   justify-self: end;
+  align-self: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -50,6 +60,10 @@ form {
 
   .add-goal {
     margin-right: 20%;
+  }
+
+  .goal-div {
+    grid-template-columns: 2.5% 1fr 1fr;
   }
 }
 

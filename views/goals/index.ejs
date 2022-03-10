@@ -10,20 +10,21 @@
   </div>
 
    <% goals.forEach(goal => { %>
-    <section>
+    
       <div class="goal-div">
-      <p>
+      
         <% if (goal.achieved) { %>
           <i class="fa-solid fa-check"></i> 
         <% } %>
-        <%= goal.content %> 
+        <p>
+         <%= goal.content %> 
       </p>
       <form action="/goals/<%= goal._id %>/edit" method="GET">
         <button id="edit-goal-btn" type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
       </form>
       
     </div>
-    </section>
+    
     
 
     
