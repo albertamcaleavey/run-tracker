@@ -12,21 +12,17 @@
    <% runs.forEach(run => { %>
     
     <div class="run-label"><%= new Date(run.date).toDateString() %></div>
-    <div class="run-body">
-        
-        <p>
+    <section class="run-body">
+      <p class="achievement-star">
           <% if (run.achievements.length) { %>
          ⭐️
         <% } %>
         </p>
-        
-       
-
         <i class="fa-solid fa-person-running"></i>
         <p id="runs-distance"><%= run.distance %> miles</p>
         <p id="runs-time" class=""><%= run.time %> minutes</p>
         <a id="runs-view" href="/runs/<%= run._id %> "><i class="fa-solid fa-angle-right"></i></a>
-      </div>
+    </section>
   <% }) %> 
 
   <% } %>
