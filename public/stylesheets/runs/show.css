@@ -64,7 +64,10 @@ ul {
   grid-row: 2;
   border-top: 1px solid rgb(172, 172, 172);
   align-self: start;
-  color: rgb(136, 136, 136);;
+  color: rgb(136, 136, 136);
+  justify-self: stretch;
+  margin-left: 6%;
+  margin-right: 6%;
 }
 
 .distance {
@@ -79,7 +82,10 @@ ul {
   grid-column: 2;
   border-top: 1px solid rgb(172, 172, 172);
   align-self: start;
-  color: rgb(136, 136, 136);;
+  color: rgb(136, 136, 136);
+  justify-self: stretch;
+  margin-left: 6%;
+  margin-right: 6%;
 }
 
 .time {
@@ -94,7 +100,10 @@ ul {
   grid-row: 4;
   border-top: 1px solid rgb(172, 172, 172);
   align-self: start;
-  color: rgb(136, 136, 136);;
+  color: rgb(136, 136, 136);
+  justify-self: stretch;
+  margin-left: 28%;
+  margin-right: 28%;
 }
 
 .average-pace {
@@ -110,8 +119,8 @@ ul {
   border-top: 1px solid rgb(172, 172, 172);
   align-self: start;
   justify-self: stretch;
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-left: 6%;
+  margin-right: 6%;
   color: rgb(136, 136, 136);;
 }
 

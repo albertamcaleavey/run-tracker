@@ -16,20 +16,22 @@
     
     <section>
       <form action="/goals/<%= goal._id %>?_method=PUT" method="POST">
-        <label>
+        
+
+        <div>
+          <input class="edit-goal-input" type="text" maxlength="300" name="content" value="<%= goal.content %>">
+        </div>
+        <div>Achieved
           <input name="achieved" type="checkbox"
           <%= goal.achieved ? 'checked' : '' %>
           >
-        </label>
-      <label>
-        <input class="edit-goal-input" type="text" maxlength="300" name="content" value="<%= goal.content %>">
-      </label>
-      <button type="submit" class="btn btn-outline-warning">Update</button>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary">Update</button>
+        </div>
       </form>
       
     </section>
-    
-
       <% } %>
 </main>
 
