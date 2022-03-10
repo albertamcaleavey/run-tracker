@@ -84,8 +84,7 @@ function show(req, res) {
   Run.findById(req.params.id)
   .populate('achievements')
   .exec(function(err, run) {
-    
-    Goal.find({_id: {$nin: run.achievements}}, function(err, goals) {
+    Goal.find({ creator: req.user.profile._id,_id: {$nin: run.achievements} }, function(err, goals) {
       console.log(run)
       console.log(goals)
       res.render('runs/show', {
@@ -96,6 +95,8 @@ function show(req, res) {
     })
   })
 }
+
+//how to filter a query to match two specifications= not already in the array AND created by the current user 
 
 
 function edit(req, res) {
