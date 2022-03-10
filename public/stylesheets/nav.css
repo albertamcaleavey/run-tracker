@@ -1,7 +1,29 @@
+.navbar-new {
+  top: 0; right: 0; bottom: 95%; left: 75%;
+  background-color: rgba(63, 63, 63, 0.637);
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .avatar {
   border-radius: 50%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
 }
+
+.avatar-container {
+  grid-column: 3;
+  place-self: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .avatar-container {
+    justify-self: end;
+    align-self: center;
+    margin-right: 5%;
+  }
+}
+
+
+
 

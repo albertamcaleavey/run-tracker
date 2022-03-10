@@ -4,10 +4,8 @@
   <link rel="stylesheet" href="/stylesheets/nav.css">
 </head>
 <body>
-  <nav>nav bar</nav>
-
   <% if (user) { %>
-    
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,20 +37,17 @@
           </ul>
           
       </div>
-      <div class="avatar-container">
-            <img class="avatar"
-              src="<%= user.profile.avatar %>"
-              alt="<%= user.profile.name %> avatar"
-            />
-          </div>
-    
-
     </nav> 
-    <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
+
+<nav class="navbar-new" >
+  <div class="avatar-container">
+        <img class="avatar"
+          src="<%= user.profile.avatar %>"
+          alt="<%= user.profile.name %> avatar"
+        />
+      </div>
+</nav>
+
+    
     <% } %>
 
