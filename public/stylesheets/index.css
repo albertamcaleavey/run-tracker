@@ -1,0 +1,18 @@
+.background {
+  position: absolute;
+  background-color: rgba(218, 218, 218, 0.486);
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: 20% 1fr 1fr;
+}
+
+.welcome-card {
+  background-color: white;
+  grid-column: 2;
+  grid-row: 2;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
