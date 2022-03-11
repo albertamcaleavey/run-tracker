@@ -24,7 +24,7 @@ Landing Page
 
 
 ## Next Steps
-- [ ] allow guests to preview the app by displaying placeholder content for non logged in users
+- [ ] allow guests to preview the app by displaying placeholder content 
 - [ ] create a profile page displaying stats such as total miles ran, achievements and most recent run details
 - [ ] display completed goals at the bottom of the goals list
 - [ ] display a logo
