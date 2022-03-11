@@ -23,7 +23,7 @@ h1 {
   padding: 1%;
   margin: 1%;
   display: grid;
-  grid-template-columns: 5% 1fr 1fr;
+  grid-template-columns: 5% 1fr 7%;
   box-shadow:0 0 15px 4px rgba(66, 66, 66, 0.116);
 }
 
