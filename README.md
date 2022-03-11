@@ -9,8 +9,9 @@ Click [here](https://run-tracker-am.herokuapp.com/) to view the app.
 Click [here](https://trello.com/b/21y9oWc3/run-tracker) to view the project planning materials.
 
 Wireframe
-![wireframe](public/assets/wireframe1.png)  Landing Page  
-Screenshot
+![wireframe](public/assets/wireframe1.png)
+Landing Page  
+![Landing Page](public/assets/landing page.png)
 
 ## Technologies Used
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  
@@ -23,4 +24,9 @@ Screenshot
 
 
 ## Next Steps
-- [ ] profile page/ dashboard displaying stats such as total miles ran, all achievements, most recent run 
+- [ ] profile page/ dashboard displaying stats such as total miles ran, all achievements and most recent run details
+- [ ] have completed goals display at the bottom of the goals list
+- [ ] display a logo
+- [ ] have the ability to create goals from the all goals page
+- [ ] add the ability to track additional workouts
+- [ ] create a calendar view where users can view current and future planned workouts

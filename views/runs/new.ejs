@@ -9,43 +9,33 @@
       <h1><%= title %></h1>
     </div>
     <div class="card">
-<form action="/runs" method="POST">
+      <form action="/runs" method="POST">
         <div>
           <label>
             <input type="date" name="date" placeholder="Time (minutes)" required>
           </label>
         </div>
-  
-
-    
         <div>
           <label>
             <input type="text" name="distance" placeholder="Distance (miles)" required>
           </label>
         </div>
-    
         <div>
           <label>
             <input type="text" name="time" placeholder="Time (minutes)" required>
           </label>
         </div>
-
-        
-    
         <div>
           <label>
             <textarea name="notes" placeholder="Notes"></textarea>
           </label>
         </div>
-  
         <div class="add-btn">
           <button type="submit" class="btn btn-primary btn-lg">Add</button>
         </div>
       </form>
     </div>
-      
-
-  <% } %>
+    <% } %>
 </main>
 
 <%- include('../partials/footer') %>

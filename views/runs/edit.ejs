@@ -12,32 +12,30 @@
       <form action="/runs/<%= run._id %>?_method=PUT" method="POST">
         <div>
           <label>
-          <input type="date" name="date" value="<%= run.date %>">
-        </label>
+            <input type="date" name="date" value="<%= run.date %>">
+          </label>
         </div>
         <div>
           <label>
-          <input type="text" name="distance" value="<%= run.distance %>">
-        </label>
+            <input type="text" name="distance" value="<%= run.distance %>">
+          </label>
         </div>
         <div>
           <label>
-          <input type="text" name="time" value="<%= run.time %>">
-        </label>
+            <input type="text" name="time" value="<%= run.time %>">
+          </label>
         </div>
         <div>
           <label>
-          <input size="20" maxlength="300" type="text" name="notes" value="<%= run.notes %> ">
-        </label>
+            <input size="20" maxlength="300" type="text" name="notes" value="<%= run.notes %> ">
+          </label>
         </div>
         <div class="update-btn">
           <button type="submit" class="btn btn-outline-primary btn-lg">Update</button>
         </div>
       </form>
     </div>
-      
   <% } %>
-  
 </main>
 
 <%- include('../partials/footer') %>

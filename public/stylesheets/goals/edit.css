@@ -21,12 +21,10 @@ h1 {
 
 .back-arrow {
   grid-column: 1;
-  /* justify-self: start; */
 }
 
 .delete {
   grid-column: 3;
-  /* justify-self: end; */
 }
 
 #garbage-btn {
@@ -35,16 +33,7 @@ h1 {
   border: 0
 }
 
-/* section {
-  display: grid;
-  place-items: center;
-} */
-
-
-
 .card {
-  /* display: grid;
-  justify-content: center; */
   border-radius: 10px;
   background-color: rgb(223, 223, 223);
   margin-left: 2%;

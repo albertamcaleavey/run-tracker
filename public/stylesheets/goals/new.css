@@ -13,7 +13,6 @@ h1 {
 
 .fa-angle-left {
   grid-column: 1;
-  /* justify-self: start; */
 }
 
 .card {

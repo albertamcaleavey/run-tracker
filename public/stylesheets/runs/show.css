@@ -27,12 +27,10 @@ h1 {
 
 .back-arrow {
   grid-column: 1;
-  /* justify-self: start; */
 }
 
 .delete {
   grid-column: 3;
-  /* justify-self: end; */
 }
 
 .card, #run-label {
