@@ -2,7 +2,7 @@
 Run Tracker is a app for tracking your runs and related fitness goals. Users can log details about their runs, create new goals and accumulate achievements as they've been reached. 
 
 ## Motivation  
-As a long time runner, I created Run Tracker as a way to visualize my progress and organize my training. Taking inspiration from running apps I've used in the past, I designed Run Tracker to be an individualized space each user, emphasizing the importance of comparing your progress only to your past self. 
+As a long time runner, I created Run Tracker as a way to visualize my progress and organize my training. Taking inspiration from running apps I've used in the past, I designed Run Tracker to be an individualized space for each user, emphasizing the importance of comparing your progress only to your past self. 
 
 ## Getting Started
 Click [here](https://run-tracker-am.herokuapp.com/) to view the app.  
