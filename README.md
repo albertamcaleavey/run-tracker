@@ -24,9 +24,9 @@ Landing Page
 
 
 ## Next Steps
-- [ ] profile page displaying stats such as total miles ran, achievements and most recent run details
+- [ ] allow guests to preview the app by displaying placeholder content for non logged in users
+- [ ] create a profile page displaying stats such as total miles ran, achievements and most recent run details
 - [ ] display completed goals at the bottom of the goals list
 - [ ] display a logo
-- [ ] have the ability to create goals from the all goals page
 - [ ] add the ability to track additional workouts
 - [ ] create a calendar view where users can view current and future planned workouts
