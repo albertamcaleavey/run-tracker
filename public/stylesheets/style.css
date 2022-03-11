@@ -48,8 +48,8 @@ h1 {
   font-size: 3.6rem;
   align-self: center;
   margin: 1%;
-  font-weight: bold;
-  color: rgb(63, 63, 63);
+  font-weight: lighter;
+  color: rgba(31, 31, 31, 0.356);
 }
 
 /* DESKTOP VIEW */
