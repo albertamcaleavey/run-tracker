@@ -7,31 +7,26 @@
     <div class="header" >
       <a class="back-arrow" href="/goals"><i class="fa-solid fa-angle-left"></i></a>
       <h1><%= title %></h1>
-      
-
       <form action="/goals/<%= goal._id %>?_method=DELETE" method="POST">
-        <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+        <button type="submit" class="btn btn-danger btn-lg"><i class="fa-solid fa-trash-can"></i></button>
       </form>
     </div>
-    
-    <section>
-      <form action="/goals/<%= goal._id %>?_method=PUT" method="POST">
-        
 
+    <div class="card">
+      <form action="/goals/<%= goal._id %>?_method=PUT" method="POST">
         <div>
-          <input class="edit-goal-input" type="text" maxlength="300" name="content" value="<%= goal.content %>">
+          <input size="20" class="edit-goal-input" type="text" maxlength="300" name="content" value="<%= goal.content %>">
         </div>
-        <div>Achieved
+        <div class="checkbox">Achieved
           <input name="achieved" type="checkbox"
           <%= goal.achieved ? 'checked' : '' %>
           >
         </div>
-        <div>
-          <button type="submit" class="btn btn-primary">Update</button>
+        <div class="update-btn">
+          <button type="submit" class="btn btn-primary btn-lg">Update</button>
         </div>
       </form>
-      
-    </section>
+    </div>
       <% } %>
 </main>
 

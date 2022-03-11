@@ -8,19 +8,25 @@
       <a class="back-arrow" href="/goals"><i class="fa-solid fa-angle-left"></i></a>
       <h1><%= title %></h1>
     </div>
-    <div class="body">
+
+    <div class="card">
       <form action="/goals" method="POST">
-        <label>
-          <textarea name="content" placeholder="Enter a new goal" class="goal-input" size required></textarea>
-        </label>
         <div>
-          <button type="submit" class="btn btn-primary btn-lg">Add</button>
+          <textarea name="content" placeholder="Enter a new goal" class="goal-input" maxlength="300" rows="5" cols="40" required></textarea>
         </div>
+          <div class="btn">
+            <button type="submit" class="btn btn-primary btn-lg">Add</button>
+          </div>
+          
       </form>
     </div>
-
     
+      
   <% } %>
+
+  <div>
+
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

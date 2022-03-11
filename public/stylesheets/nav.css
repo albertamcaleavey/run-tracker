@@ -3,6 +3,7 @@
   background-color: rgba(63, 63, 63, 0);
   position: absolute;
   justify-content: flex-end;
+  margin-left: 20%;
 }
 
 .img {
@@ -17,14 +18,14 @@
 @media only screen and (min-width: 768px) {
   .user-name {
     display: flex;
+    margin-right: 1%;
+    margin-top: 1%;
   }
 
   .navbar-mobile {
     margin-left: 46%;
     justify-content: space-between;
   }
-
-
 }
 
 

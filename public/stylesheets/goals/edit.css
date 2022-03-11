@@ -35,10 +35,36 @@ h1 {
   border: 0
 }
 
-section {
+/* section {
   display: grid;
   place-items: center;
+} */
+
+
+
+.card {
+  /* display: grid;
+  justify-content: center; */
+  border-radius: 10px;
+  background-color: rgb(223, 223, 223);
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 5%;
+  padding: 3%;
+  /* padding-bottom: 40%; */
 }
+
+.checkbox {
+  padding: 3%;
+  border-bottom: 1px solid rgb(172, 172, 172);
+  margin-bottom: 5%;
+}
+
+.update-btn {
+  display: grid;
+  justify-content: center;
+}
+
 
 .edit-goal-input {
   border: 0;
@@ -47,5 +73,22 @@ section {
   grid-row: 2;
   place-self: center;
   box-shadow:0 0 15px 4px rgba(66, 66, 66, 0.116);
+  width: 100%;
+  padding: 2%;
+  padding-bottom: 20%;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
+    .card {
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-top: 5%;
+      padding: 3%;
+    }
+  }
+  
 }
 
