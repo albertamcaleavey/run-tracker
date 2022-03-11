@@ -15,6 +15,10 @@
   display: none;
 }
 
+.app-name {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .user-name {
     display: flex;
@@ -25,6 +29,21 @@
   .navbar-mobile {
     margin-left: 46%;
     justify-content: space-between;
+  }
+
+  img {
+    display: none;
+  }
+
+  .app-name {
+    display: flex;
+    margin-top: 1%;
+    font-style: italic;
+    font-family: 'Oswald', sans-serif;
+    color: rgba(29, 56, 78, 0.884);
+    text-shadow: black;
+    font-size: larger;
+    outline: rgb(39, 38, 35);
   }
 }
 

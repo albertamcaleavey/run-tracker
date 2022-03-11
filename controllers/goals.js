@@ -1,7 +1,6 @@
 import { Goal } from "../models/goal.js"
 
-function index(req, res) {
-  // only find goals that were created by the current user 
+function index(req, res) { 
   Goal.find({ creator: req.user.profile._id })
   .then(goals => {
     goals.reverse()

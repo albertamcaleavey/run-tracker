@@ -8,6 +8,11 @@
       <h1><%= title %></h1>
       <a class="add-run" href="/runs/new"><i class="fa-solid fa-plus"></i></a>
     </div>
+    <% if (!runs.length) { %>
+      <div class="no-runs-msg">
+        <h2>You have no activities! Click the plus button to add a new run.</h2>
+      </div>
+    <% } %> 
 
    <% runs.forEach(run => { %>
     

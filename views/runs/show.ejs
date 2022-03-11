@@ -7,8 +7,9 @@
   <div class="header" >
     <a class="back-arrow" href="/runs"><i class="fa-solid fa-angle-left"></i></a>
     <h1><%= title %></h1>
+
     <form class="delete" action="/runs/<%= run._id %>?_method=DELETE" method="POST">
-      <button id="garbage-btn" type="submit"><i class="fa-solid fa-trash-can"></i></button>
+      <button type="submit" class="btn btn-danger btn-lg"><i class="fa-solid fa-trash-can"></i></button>
     </form>
   </div>
 
@@ -17,14 +18,14 @@
   </div>
 
   <div class="card">
-    <div class="distance-label" >Distance (mi)</div>
+    <div class="distance-label" >Distance</div>
     <div class="distance"> <%= run.distance %> mi</div>
-    <div class="time-label">Time (mins)</div>
-    <div class="time"> <%= run.time %></div>
-    <div class="average-pace-label" >Average Pace (mins/mi)</div>
-    <div class="average-pace"> <%= run.time/run.distance %></div>
+    <div class="time-label">Time</div>
+    <div class="time"> <%= run.time %> mins</div>
+    <div class="average-pace-label" >Average Pace</div>
+    <div class="average-pace"> <%= run.time/run.distance %> mins/mi</div>
     <div class="notes-label">Notes</div>
-    <div class="notes"><%= run.notes === '' ? 'None' : `${run.notes}` %>
+    <div class="notes"><%= run.notes === '' ? 'No notes' : `${run.notes}` %>
     </div>
     <div class="achievements-label" ><%= run.achievements.length ? 'Achievements' : 'Add an Achievement' %> </div>
 <div class="achievements-list">
@@ -35,12 +36,12 @@
     </ul>
 </div>
     <form class="add-achievement-to-run" action="/runs/<%= run._id  %>/goals" method="POST">
-      <select class="achievement-select" name="goalId">
+      <select style="width: 200px" class="achievement-select" name="goalId">
         <% goals.forEach(goal => { %>
           <option value="<%= goal._id %>"><%= goal.content %></option>
         <% }) %>
       </select>
-      <button type="submit" class="btn btn-outline-primary">Add</button>
+      <button type="submit" class="btn btn-outline-primary btn-lg">Add</button>
     </form>
 
     <form class="edit-btn" action="/runs/<%= run._id %>/edit" method="GET">

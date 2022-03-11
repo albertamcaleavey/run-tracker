@@ -50,6 +50,8 @@ h1 {
   font-size: 3.6rem;
   align-self: center;
   margin: 1%;
+  font-weight: bold;
+  color: rgb(63, 63, 63);
 }
 
 /* DESKTOP VIEW */

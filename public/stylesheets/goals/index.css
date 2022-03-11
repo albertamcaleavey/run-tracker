@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
+  margin-bottom: 2%;
 }
 
 h1 {
@@ -43,7 +44,6 @@ p {
   background-color: rgba(240, 248, 255, 0);
   border-radius: 50%;
   border: 0;
-  
 }
 
 form {
@@ -52,19 +52,29 @@ form {
   align-self: center;
 }
 
+.fa-pen-to-square {
+  color: rgba(128, 128, 128, 0.637)
+}
+
 @media only screen and (min-width: 768px) {
   .goal-div {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .add-goal {
-    margin-right: 20%;
+    margin-right: 35%;
   }
 
   .goal-div {
     grid-template-columns: 2.5% 1fr 1fr;
   }
+
+  .add-goal, .fa-check, .fa-pen-to-square {
+    font-size: x-large;
+  }
+
+
 }
 
 

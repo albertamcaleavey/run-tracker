@@ -8,9 +8,8 @@
       <a class="back-arrow" href="/runs"><i class="fa-solid fa-angle-left"></i></a>
       <h1><%= title %></h1>
     </div>
-
-    <section>
-      <form action="/runs" method="POST">
+    <div class="card">
+<form action="/runs" method="POST">
         <div>
           <label>
             <input type="date" name="date" placeholder="Time (minutes)" required>
@@ -39,11 +38,12 @@
           </label>
         </div>
   
-        <div>
+        <div class="add-btn">
           <button type="submit" class="btn btn-primary btn-lg">Add</button>
         </div>
       </form>
-    </section>
+    </div>
+      
 
   <% } %>
 </main>
