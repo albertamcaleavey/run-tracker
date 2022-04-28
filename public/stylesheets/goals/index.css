@@ -1,8 +1,7 @@
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  align-items: center;
+  place-items: center;
   margin-bottom: 2%;
 }
 
@@ -35,8 +34,7 @@ p {
 
 .fa-check {
   grid-column: 1;
-  align-self: center;
-  justify-self: start;
+  place-self: center start;
   margin-left: 1%;
 }
 
@@ -48,8 +46,7 @@ p {
 
 form {
   grid-column: 3;
-  justify-self: end;
-  align-self: center;
+  place-self: center end;
 }
 
 .fa-pen-to-square {
